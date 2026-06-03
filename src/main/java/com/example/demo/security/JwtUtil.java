@@ -15,7 +15,8 @@ import java.util.Date;
 @Slf4j
 public class JwtUtil {
 
-    @Value("${app.jwt.secret}")
+    // Updates inside JwtUtil.java
+    @Value("${JWT_SECRET:mySecretKeyForLocalTestingSuperLongKey1234567890!}")
     private String jwtSecret;
 
     @Value("${app.jwt.expiration-ms}")
